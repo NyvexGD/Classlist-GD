@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracze — Classlist GD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gracze</h1>
+        <p>Wszyscy gracze w Classlist GD</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Lista graczy</h2>
+
+            <input
+                type="search"
+                id="playerSearch"
+                placeholder="Szukaj gracza..."
+                maxlength="50"
+            >
+
+            <p id="playerCount"></p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gracz</th>
+                        <th>Ukończone demony</th>
+                        <th>Punkty</th>
+                        <th>Profil</th>
+                    </tr>
+                </thead>
+                <tbody id="playersList"></tbody>
+            </table>
+        </section>
+
+        <p><a href="index.html">← Powrót do rankingu</a></p>
+    </main>
+
+    
+    <script src="players.js"></script>
+</body>
+</html>

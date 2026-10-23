@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classlist GD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Classlist GD</h1>
+        <p>Ranking Geometry Dash naszej klasy.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Dodaj gracza</h2>
+            <form id="playerForm">
+                <input id="playerName" placeholder="Nick gracza"
+                    maxlength="30" required>
+                <button type="submit">Dodaj gracza</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Ranking graczy</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Gracz</th>
+                        <th>Najtrudniejszy demon</th>
+                        <th>Ukończone demony</th>
+                        <th>Punkty</th>
+                        <th>Akcje</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking"></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Dodaj poziom do katalogu</h2>
+            <form id="levelForm">
+                <input id="levelName" placeholder="Nazwa poziomu"
+                    maxlength="80" required>
+
+                <select id="levelDifficulty" required>
+                    <option value="Easy Demon">Easy Demon — 10 pkt</option>
+                    <option value="Medium Demon">Medium Demon — 13 pkt</option>
+                    <option value="Hard Demon">Hard Demon — 18 pkt</option>
+                    <option value="Insane Demon">Insane Demon — 20 pkt</option>
+                    <option value="Extreme Demon">Extreme Demon — 25 pkt</option>
+                </select>
+
+                <button type="submit">Dodaj poziom</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lista poziomów</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nazwa poziomu</th>
+                        <th>Trudność</th>
+                        <th>Punkty</th>
+                        <th>Akcje</th>
+                    </tr>
+                </thead>
+                <tbody id="levelList"></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Dodaj ukończony demon</h2>
+            <form id="completionForm">
+                <select id="completionPlayer" required>
+                    <option value="">Wybierz gracza</option>
+                </select>
+
+                <select id="completionLevel" required>
+                    <option value="">Wybierz poziom</option>
+                </select>
+
+                <button type="submit">Dodaj rekord</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Rekordy graczy</h2>
+            <p class="description">
+                Tutaj możesz sprawdzić ukończone poziomy i usuwać błędne wpisy.
+            </p>
+            <div id="playerRecords"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Classlist GD — ranking Geometry Dash</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

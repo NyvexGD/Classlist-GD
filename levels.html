@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog poziomów — Classlist GD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Katalog poziomów</h1>
+        <p>Wszystkie demony w Classlist GD</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Wyszukaj poziom</h2>
+
+            <input
+                type="search"
+                id="levelSearch"
+                placeholder="Wpisz nazwę poziomu..."
+                maxlength="80"
+            >
+
+            <select id="difficultyFilter">
+                <option value="">Wszystkie trudności</option>
+                <option value="Easy Demon">Easy Demon</option>
+                <option value="Medium Demon">Medium Demon</option>
+                <option value="Hard Demon">Hard Demon</option>
+                <option value="Insane Demon">Insane Demon</option>
+                <option value="Extreme Demon">Extreme Demon</option>
+            </select>
+
+            <p id="levelCount"></p>
+        </section>
+
+        <section>
+            <h2>Poziomy</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nazwa</th>
+                        <th>Trudność</th>
+                        <th>Punkty</th>
+                        <th>Ukończenia</th>
+                        <th>Strona poziomu</th>
+                    </tr>
+                </thead>
+                <tbody id="levelsList"></tbody>
+            </table>
+        </section>
+
+        <p><a href="index.html">← Powrót do rankingu</a></p>
+        <p><a href="players.html">Przejdź do katalogu graczy →</a></p>
+    </main>
+
+    <script src="levels.js"></script>
+</body>
+</html>
